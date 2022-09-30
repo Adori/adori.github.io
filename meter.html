@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <link rel="stylesheet" href="css/bootstrap3.min.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap3.min.js"></script>
+    <title>Pricing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+        @font-face {
+            font-family: 'OpenSans-ExtraBold';
+            src: URL('/fonts/OpenSans-ExtraBold.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'OpenSans-Bold';
+            src: URL('/fonts/OpenSans-Bold.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'OpenSans-Regular';
+            src: URL('/fonts/OpenSans-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'OpenSans-Medium';
+            src: URL('/fonts/OpenSans-Medium.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'OpenSans-Light';
+            src: URL('/fonts/OpenSans-Light.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'OpenSans-SemiBold';
+            src: URL('/fonts/OpenSans-SemiBold.ttf') format('truetype');
+        }
+
+        body {
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            font-family: "OpenSans-RG-16", sans-serif;
+            color: darkgray;
+            background-color: black;
+        }
+
+        /* body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: space-evenly;
+  place-items: center;
+  gap: 10%;
+  padding: 0;
+  background-color:black;
+  color:white;
+} */
+        
+        .OpenSans-SB-36{
+            font-size: 36px;
+            letter-spacing: 1.5px;
+            font-family: "OpenSans-SemiBold", sans-serif;
+            color: #fff;
+            background-color: black;
+        }
+
+        .OpenSans-SB-24W{
+            font-size: 24px;
+            letter-spacing: 1.5px;
+            font-family: "OpenSans-SemiBold", sans-serif;
+            color: #fff;
+            background-color: black;
+        }
+
+        .OpenSans-SB-24{
+            font-size: 24px;
+            letter-spacing: 1.5px;
+            font-family: "OpenSans-SemiBold", sans-serif;
+            color: darkgrey;
+            background-color: black;
+        }
+
+        .OpenSans-RG-16{
+            font-size: 16px;
+            letter-spacing: 1.5px;
+            font-family: "OpenSans-Regular", sans-serif;
+            color: darkgrey;
+            background-color: black;
+        }
+        .OpenSans-RG-18{
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            font-family: "OpenSans-Regular", sans-serif;
+            color: darkgrey;
+            background-color: black;
+        }
+        /* .inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .left-part {
+            width: 100%;
+        }
+
+        .right-part {
+            width: 100%;
+        }
+
+        .right {
+            width: 100%;
+            display: flex;
+        } */
+
+        .container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .slider-container {
+            width: 50%;
+            padding: 16px;
+        }
+
+        .inter-container {
+            width: 40%;
+            padding: 16px;
+        }
+
+        .cost-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column; 
+            /* width: 40%; */
+             /* padding: 16px; */
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: #313131;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #de1a23;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #de1a23;
+            cursor: pointer;
+        }
+
+
+        .mt10 {
+            margin-top: 10px;
+        }
+        .center {
+            text-align: center;
+        }
+        .left {
+            text-align: left;
+        }
+        .pricing-table {
+            box-sizing: border-box;
+            display: flex;
+            flex: 0 1 auto;
+            flex-flow: row wrap;
+            margin-right: -0.9375rem;
+            margin-left: -0.9375rem;
+            margin-bottom: 20px;
+        }
+
+        .pricing {
+            flex-basis: 58.3333%;
+            max-width: 58.3333%;
+            display: block;
+            background: linear-gradient(45deg, rgba(28, 160, 253, 0.1) 0%, rgba(31, 195, 168, 0.1) 100%);
+            padding: 30px 30px 41px;
+        }
+
+        .pricing-header {
+            padding-left: 70px;
+            padding-right: 70px;
+            margin-bottom: 10px;
+        }
+
+        .price-switch {
+            max-width: 520px;
+            margin: 0px auto;
+        }
+
+        .price-switch .first {
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+        }
+
+        .title {
+            line-height: 1;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .cost {
+            font-size: 18px;
+            line-height: 42px;
+            letter-spacing: -1px;
+            font-weight: bold;
+        }
+
+        .space {
+            border-bottom: 1px solid rgb(204, 204, 204);
+            margin-bottom: 15px;
+        }
+
+        .mt10 {
+            margin-top: 10px;
+        }
+
+        .mb10 {
+            margin-bottom: 10px;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+        .mb20 {
+            margin-bottom: 20px;
+        }
+
+        .mt30 {
+            margin-top: 30px;
+        }
+
+        .mb30 {
+            margin-bottom: 30px;
+        }
+
+
+        .mt40 {
+            margin-top: 40px;
+        }
+
+        .mb40 {
+            margin-bottom: 40px;
+        }
+
+        .final-cost {
+            width: 180px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #de1a23;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .banner {
+            display: none;
+            padding: 30px 30px 40px;
+            justify-content: center;
+            align-items: center;
+            background-color: #1b1b1b;
+            color: #fff;
+            margin-top: 20px;
+            justify-content: space-evenly;
+        }
+
+        .banner .header {
+            font-size: 16px;
+        }
+
+        .banner .small {
+            font-size: 12px;
+        }
+
+        .btn {
+            width: 150px;
+            padding: 10px;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+            outline: 0;
+            margin-right: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn.normal {
+            background: #313131;
+            border: 1px solid #fff;
+
+        }
+
+        .btn.red {
+            background: #de1a23;
+            border: none;
+        }
+
+        a:link {
+        color: silver;
+        background-color: transparent;
+        text-decoration: none;
+        }
+        a:visited {
+        color: grey;
+        background-color: transparent;
+        text-decoration: none;
+        }
+        a:hover {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+        }
+        a:active {
+        color: green;
+        background-color: transparent;
+        text-decoration: underline;
+        }
+        .show{
+            display:block;
+        }
+        .hide {
+            display:none;
+        }
+        .header1 {
+            font-size: 18px;
+        }
+
+        .small1 {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body onload="load()">
+    <div class="center container-fluid">
+
+       <!-- <h1>Adori Pricing Calculator</h1>
+
+        <div class="pricing-table mt10">
+            <div class="pricing">
+                <div class="pricing-header">Pricing table</div>
+                <div class="price-switch">
+                    <div>
+                        <div class="first">
+                            <div class="title">Create Video</div>
+                            <div class="cost">$0.010/min</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="price-switch">
+                    <div>
+                        <div class="first">
+                            <div class="title">Suggested Tags/Transcription</div>
+                            <div class="cost">$0.100/min</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact"></div>
+        </div> -->
+
+        <h1 class="OpenSans-SB-24W">Estimate your monthly cost</h1>
+
+
+
+        <div class="inner row">
+            <div class="left-part col-md-12 col-lg-12 col-xs-12">
+                <h3  >
+                    <div class="container OpenSans-SB-24">Create video cost</div>
+                </h3>
+                <div class="container">
+                    <div class="slider-container">
+                        <div id="show-mins-video" class="mb20">1 mins</div>
+                        <div><input class="slider myRange"  id="video-audio-length"  value="1" type="range" min="0" max="300"
+                                oninput="sliderChange(this.value)" step="1">
+                                <p> <span id="demo"></span></p>
+                        </div>
+                        <h6>Average audio length minutes</h6>
+
+
+                        <div class="mt40 mb10" id="videos">1 video(s)</div>
+                        <div><input class="slider" id="video-number-length" type="range" min="1" max="100" value="1"
+                                step="1" oninput="sliderChangeNumberVideos(this.value)">
+                        </div>
+
+                        <h6>Number of videos per month</h6>
+                    </div>
+                    <div class=" mt20 mb10 inter-container">
+                        <div>Create Video Cost</div>
+
+                        <div  class="center" id="total-cost-video"></div>
+                        <div id="total-costhdn" style="visibility: visible; display: none;"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="right-part col-md-12 col-lg-12 col-xs-12">
+                <h3>
+                    <div class="container OpenSans-SB-24">Transcription cost</div>
+                </h3>
+                <div class="container">
+                    <div class="slider-container">
+                        <div id="show-mins-trans" class="mb10">1 mins</div>
+                        <div><input class="slider" id="trans-audio-length" type="range" min="0" max="300" value="1"
+                                step="1" oninput="sliderChangeTrans(this.value)">
+                        </div>
+                        <h6>Average audio length minutes</h6>
+
+
+                        <div class="mt40 mb10" id="videos-trans">1 video(s)</div>
+                        <div><input class="slider" id="trans-number-length" type="range" min="1" max="100" value="1"
+                                step="1" oninput="sliderChangeNumberVideosTrans(this.value)">
+                        </div>
+
+                        <h6>Number of videos per month</h6>
+                        
+                    </div>
+                    <div class=" mt20 mb10 inter-container">
+                        <div>Transcription Cost</div>
+                        <div  class="center" id="total-cost-trans"></div>
+                        <div style="visibility: visible; display: none;" id="total-cost-transhdn"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="cost-container right col-md-12 col-lg-12 col-xs-12">
+                <h3 class="OpenSans-SB-24">Estimated Total</h3>
+                <div id="final-cost" class="final-cost" style= "color:white">$3.30</div>
+                <!-- basic -->
+                <div  id="level1" style="display:block;"> 
+                    <div class="header1 mt40">Thinking about how to scale this <br> 
+                        at your organization? </div>
+                    <div class="small1 mt10"><a href="https://www.adorilabs.com/contact" target="_blank">Talk to us</a></div>
+               </div>
+               <div  id="level2" style="display:none;"> 
+                <div class="header1 mt40">High-Volume Discounts Available </div>
+                <div class="small1 mt10"><a href="https://www.adorilabs.com/contact" target="_blank">Talk to us</a></div>
+              </div>
+              <div  id="level3" style="display:none;"> 
+                <div class="header1 mt40">Let's chat about a custom plan </div>
+                <div class="small1 mt10"><a href="https://www.adorilabs.com/contact" target="_blank">Talk to us</a></div>
+             </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- <div class="banner">
+            <div>
+                <div class="header">CREATE AND PUBLISH VISUALLY ENHANCED </div>
+                <div class="header">VIDEOS TO YOUTUBE </div>
+                <div class="small">No credit card required to start. $20 in free credit when you're ready</div>
+            </div>
+            <div>
+                <a class="btn normal" href="adorilabs.com">Talk to us</a>
+
+                <a class="btn red" href="studio.adorilabs.com/onboarding">Create account</a>
+            </div>
+        </div> -->
+    </div>
+    <script src="js/meter.js"></script>
+</body>
+
+
+</html>
