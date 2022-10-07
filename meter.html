@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
     <link rel="stylesheet" href="css/bootstrap3.min.css">
 
     <script src="js/jquery.js"></script>
@@ -22,18 +22,22 @@
             font-family: 'OpenSans-Bold';
             src: URL('/fonts/OpenSans-Bold.ttf') format('truetype');
         }
+
         @font-face {
             font-family: 'OpenSans-Regular';
             src: URL('/fonts/OpenSans-Regular.ttf') format('truetype');
         }
+
         @font-face {
             font-family: 'OpenSans-Medium';
             src: URL('/fonts/OpenSans-Medium.ttf') format('truetype');
         }
+
         @font-face {
             font-family: 'OpenSans-Light';
             src: URL('/fonts/OpenSans-Light.ttf') format('truetype');
         }
+
         @font-face {
             font-family: 'OpenSans-SemiBold';
             src: URL('/fonts/OpenSans-SemiBold.ttf') format('truetype');
@@ -58,8 +62,8 @@
   background-color:black;
   color:white;
 } */
-        
-        .OpenSans-SB-36{
+
+        .OpenSans-SB-36 {
             font-size: 36px;
             letter-spacing: 1.5px;
             font-family: "OpenSans-SemiBold", sans-serif;
@@ -67,7 +71,7 @@
             background-color: black;
         }
 
-        .OpenSans-SB-24W{
+        .OpenSans-SB-24W {
             font-size: 24px;
             letter-spacing: 1.5px;
             font-family: "OpenSans-SemiBold", sans-serif;
@@ -75,7 +79,7 @@
             background-color: black;
         }
 
-        .OpenSans-SB-24{
+        .OpenSans-SB-24 {
             font-size: 24px;
             letter-spacing: 1.5px;
             font-family: "OpenSans-SemiBold", sans-serif;
@@ -83,20 +87,22 @@
             background-color: black;
         }
 
-        .OpenSans-RG-16{
+        .OpenSans-RG-16 {
             font-size: 16px;
             letter-spacing: 1.5px;
             font-family: "OpenSans-Regular", sans-serif;
             color: darkgrey;
             background-color: black;
         }
-        .OpenSans-RG-18{
+
+        .OpenSans-RG-18 {
             font-size: 18px;
             letter-spacing: 1.5px;
             font-family: "OpenSans-Regular", sans-serif;
             color: darkgrey;
             background-color: black;
         }
+
         /* .inner {
             display: flex;
             flex-direction: column;
@@ -135,9 +141,9 @@
         .cost-container {
             display: flex;
             align-items: center;
-            flex-direction: column; 
+            flex-direction: column;
             /* width: 40%; */
-             /* padding: 16px; */
+            /* padding: 16px; */
         }
 
         .slider {
@@ -178,12 +184,15 @@
         .mt10 {
             margin-top: 10px;
         }
+
         .center {
             text-align: center;
         }
+
         .left {
             text-align: left;
         }
+
         .pricing-table {
             box-sizing: border-box;
             display: flex;
@@ -326,31 +335,37 @@
         }
 
         a:link {
-        color: silver;
-        background-color: transparent;
-        text-decoration: none;
+            color: silver;
+            background-color: transparent;
+            text-decoration: none;
         }
+
         a:visited {
-        color: grey;
-        background-color: transparent;
-        text-decoration: none;
+            color: grey;
+            background-color: transparent;
+            text-decoration: none;
         }
+
         a:hover {
-        color: white;
-        background-color: transparent;
-        text-decoration: underline;
+            color: white;
+            background-color: transparent;
+            text-decoration: underline;
         }
+
         a:active {
-        color: green;
-        background-color: transparent;
-        text-decoration: underline;
+            color: green;
+            background-color: transparent;
+            text-decoration: underline;
         }
-        .show{
-            display:block;
+
+        .show {
+            display: block;
         }
+
         .hide {
-            display:none;
+            display: none;
         }
+
         .header1 {
             font-size: 18px;
         }
@@ -364,7 +379,7 @@
 <body onload="load()">
     <div class="center container-fluid">
 
-       <!-- <h1>Adori Pricing Calculator</h1>
+        <!-- <h1>Adori Pricing Calculator</h1>
 
         <div class="pricing-table mt10">
             <div class="pricing">
@@ -396,15 +411,15 @@
 
         <div class="inner row">
             <div class="left-part col-md-12 col-lg-12 col-xs-12">
-                <h3  >
+                <h3>
                     <div class="container OpenSans-SB-24">Create video cost</div>
                 </h3>
                 <div class="container">
                     <div class="slider-container">
                         <div id="show-mins-video" class="mb20">1 mins</div>
-                        <div><input class="slider myRange"  id="video-audio-length"  value="1" type="range" min="0" max="300"
-                                oninput="sliderChange(this.value)" step="1">
-                                <p> <span id="demo"></span></p>
+                        <div><input class="slider myRange" id="video-audio-length" value="1" type="range" min="0"
+                                max="300" oninput="sliderChange(this.value)" step="1">
+                            <p> <span id="demo"></span></p>
                         </div>
                         <h6>Average audio length minutes</h6>
 
@@ -419,7 +434,7 @@
                     <div class=" mt20 mb10 inter-container">
                         <div>Create Video Cost</div>
 
-                        <div  class="center" id="total-cost-video"></div>
+                        <div class="center" id="total-cost-video"></div>
                         <div id="total-costhdn" style="visibility: visible; display: none;"></div>
                     </div>
 
@@ -444,11 +459,11 @@
                         </div>
 
                         <h6>Number of videos per month</h6>
-                        
+
                     </div>
                     <div class=" mt20 mb10 inter-container">
                         <div>Transcription Cost</div>
-                        <div  class="center" id="total-cost-trans"></div>
+                        <div class="center" id="total-cost-trans"></div>
                         <div style="visibility: visible; display: none;" id="total-cost-transhdn"></div>
                     </div>
 
@@ -456,26 +471,29 @@
             </div>
             <div class="cost-container right col-md-12 col-lg-12 col-xs-12">
                 <h3 class="OpenSans-SB-24">Estimated Total</h3>
-                <div id="final-cost" class="final-cost" style= "color:white">$3.30</div>
+                <div id="final-cost" class="final-cost" style="color:white">$3.30</div>
                 <!-- basic -->
-                <div  id="level1" style="display:block;"> 
-                    <div class="header1 mt40">Thinking about how to scale this <br> 
+                <div id="level1" style="display:block;">
+                    <div class="header1 mt40">Thinking about how to scale this <br>
                         at your organization? </div>
-                    <div class="small1 mt10"><a href="https://www.adorilabs.com/contact" target="_blank">Talk to us</a></div>
-               </div>
-               <div  id="level2" style="display:none;"> 
-                <div class="header1 mt40">High-Volume Discounts Available </div>
-                <div class="small1 mt10"><a href="https://www.adorilabs.com/contact" target="_blank">Talk to us</a></div>
-              </div>
-              <div  id="level3" style="display:none;"> 
-                <div class="header1 mt40">Let's chat about a custom plan </div>
-                <div class="small1 mt10"><a href="https://www.adorilabs.com/contact" target="_blank">Talk to us</a></div>
-             </div>
-            </div>
+                    <div class="small1 mt10"><a href="https://www.adorilabs.com/contact" target="_blank">Talk to us</a>
+                    </div>
+                </div>
+                <div id="level2" style="display:none;">
+                    <div class="header1 mt40">High-Volume Discounts Available </div>
+                    <div class="small1 mt10"><a href="https://www.adorilabs.com/contact" target="_blank">Talk to us</a>
+                    </div>
+                </div>
+                <div id="level3" style="display:none;">
+                    <div class="header1 mt40">Let's chat about a custom plan </div>
+                    <div class="small1 mt10"><a href="https://www.adorilabs.com/contact" target="_blank">Talk to us</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <!-- <div class="banner">
+    <!-- <div class="banner">
             <div>
                 <div class="header">CREATE AND PUBLISH VISUALLY ENHANCED </div>
                 <div class="header">VIDEOS TO YOUTUBE </div>
