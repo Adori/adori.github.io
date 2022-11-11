@@ -1,6 +1,6 @@
 {
   "image": {
-    "model": "text-curie-001",
+    "model": "text-davinci-002",
     "prompt": "An image that make the most sense to go with this paragraph would be:",
     "temperature": 0.7,
     "max_tokens": 64,
@@ -9,7 +9,7 @@
     "presence_penalty": 0.0
   },
   "poll": {
-    "model": "text-curie-001",
+    "model": "text-davinci-002",
     "prompt": "one multiple choice question and options:",
     "temperature": 0.7,
     "max_tokens": 64,
@@ -18,7 +18,7 @@
     "presence_penalty": 0.0
   },
   "text": {
-    "model": "text-curie-001",
+    "model": "text-davinci-002",
     "prompt": "Summarize in one line:",
     "temperature": 0.7,
     "max_tokens": 64,
@@ -27,7 +27,7 @@
     "presence_penalty": 0.0
   },
   "custom": {
-    "model": "text-curie-001",
+    "model": "text-davinci-002",
     "prompt": "Summarize this for a second-grade student",
     "temperature": 0.7,
     "max_tokens": 64,
