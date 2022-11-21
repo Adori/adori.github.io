@@ -1,6 +1,6 @@
 {
   "image": {
-    "model": "text-davinci-002",
+    "model": "text-ada-001",
     "prompt": "An image that make the most sense to go with this paragraph would be:",
     "temperature": 0.7,
     "max_tokens": 64,
@@ -18,7 +18,7 @@
     "presence_penalty": 0.0
   },
   "text": {
-    "model": "text-davinci-002",
+    "model": "text-ada-002",
     "prompt": "Summarize in one line:",
     "temperature": 0.7,
     "max_tokens": 64,
@@ -27,7 +27,7 @@
     "presence_penalty": 0.0
   },
   "custom": {
-    "model": "text-davinci-002",
+    "model": "text-ada-002",
     "prompt": "Summarize this for a second-grade student",
     "temperature": 0.7,
     "max_tokens": 64,
