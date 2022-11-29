@@ -18,7 +18,7 @@
     "presence_penalty": 0.0
   },
   "text": {
-    "model": "text-curie-001",
+    "model": "text-davinci-002",
     "prompt": "Summarize in one line:",
     "temperature": 0.7,
     "max_tokens": 64,
@@ -27,7 +27,7 @@
     "presence_penalty": 0.0
   },
   "custom": {
-    "model": "text-curie-001",
+    "model": "text-davinci-002",
     "prompt": "Summarize this for a second-grade student",
     "temperature": 0.7,
     "max_tokens": 64,
