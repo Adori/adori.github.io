@@ -1,8 +1,8 @@
 {
   "keywords": {
     "model": "text-davinci-002",
-    "prompt": 'Extract keywords from this text:',
-    "context": 'Extract keywords from this text:',
+    "prompt": "Extract keywords from this text:",
+    "context": "Extract keywords from this text:",
     "temperature": 0.7,
     "max_tokens": 64,
     "top_p": 1.0,
