@@ -1,1 +1,24 @@
-null
+{
+  "users": [
+    {
+      "adori_id": 17928,
+      "firstName": "Vini",
+      "lastName": "Katyal"
+    },
+    {
+      "adori_id": 17949,
+      "firstName": "Hello",
+      "lastName": "Medhurst"
+    },
+    {
+      "adori_id": 18057,
+      "firstName": "One more",
+      "lastName": "Medhurst"
+    },
+    {
+      "adori_id": 1906,
+      "firstName": "Vinod",
+      "lastName": "Hegde"
+    }
+  ]
+}
